@@ -1,10 +1,10 @@
 
 <!-- saved from url=(0037)http://cnnlocalization.csail.mit.edu/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>GBCNet-IITD</title>
+<title>MALL-code</title>
 
-<script async="" src="./gbcnet-iitd/analytics.js.download"></script><script type="text/javascript" src="./gbcnet-iitd/jquery.mlens-1.0.min.js.download"></script>
-<script type="text/javascript" src="./gbcnet-iitd/jquery.js.download"></script>
+<script async="" src="./mall-iitd/analytics.js.download"></script><script type="text/javascript" src="./mall-iitd/jquery.mlens-1.0.min.js.download"></script>
+<script type="text/javascript" src="./mall-iitd/jquery.js.download"></script>
 <style>
 body
 {
@@ -200,13 +200,13 @@ p code
 </p>
 
 <div class="downloadpaper">
-<a href="./gbcnet-iitd/arch-compact.jpg"><img src="./gbcnet-iitd/arch-compact.jpg" width="400px" border="2"></a>
+<a href="./mall-iitd/arch-compact.jpg"><img src="./mall-iitd/arch-compact.jpg" width="400px" border="2"></a>
 </div>
 
 <p>In this work, we explore the potential of CNN-based models for gallbladder cancer (GBC) detection from ultrasound sonography (USG) images as no prior study is known. USG is the most common diagnostic modality for GBC detection due to its low cost and accessibility. However, USG images are challenging to analyze due to low image quality, noise, and varying viewpoints due to the handheld nature of the sensor. Our exhaustive study of state-of-the-art (SOTA) image classification techniques for the problem reveals that they often fail to learn the salient GB region due to the presence of shadows in the USG images. SOTA object detection techniques also achieve low accuracy because of spurious textures due to noise or adjacent organs. We propose GBCNet to tackle the challenges in our problem. GBCNet first extracts the regions of interest (ROIs) by detecting the GB (and not cancer), and then uses a new multi-scale, second-order pooling architecture specializing in classifying GBC. To effectively handle spurious textures, we propose a curriculum inspired by human visual acuity, which reduces the texture biases in GBCNet. Experimental results demonstrate that GBCNet significantly outperforms SOTA CNN models, as well as even the expert radiologists. 
 </p>
 
-<p><a href="./gbcnet-iitd/08360.pdf" target="_blank">Paper</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="./gbcnet-iitd/08360-supp.pdf" target="_blank">Supplementary</a></p>
+<p><a href="./mall-iitd/08360.pdf" target="_blank">Paper</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="./mall-iitd/08360-supp.pdf" target="_blank">Supplementary</a></p>
 
 <p><a href="https://gbc-iitd.github.io/data/gbcu" target="_blank">Dataset</a></p>
 
@@ -221,7 +221,7 @@ p code
 <h2>Overview</h2>
 
 <div class="downloadpaper">
-<a href="./gbcnet-iitd/teaser.png"><img src="./gbcnet-iitd/teaser.png" width="200px" border="2"></a>
+<a href="./mall-iitd/teaser.png"><img src="./mall-iitd/teaser.png" width="200px" border="2"></a>
 </div>
 
 <p>(a), (b), and (c) Normal, benign, and malignant GB sample in USG images, respectively. While normal or benign GB have regular anatomy, clear boundary is absent in malignant GB. 
@@ -238,7 +238,7 @@ p code
 
 <h2>Grad-CAM Visuals</h2>
 
-<p align="center"><img src="./gbcnet-iitd/cam.png" width="450px"> </p>
+<p align="center"><img src="./mall-iitd/cam.png" width="450px"> </p>
 
 <p>
 VGG16, ResNet50, and Inception-V3 focus on the shadow or the echogenic area, and mostly fail to detect GBC. GBCNet accurately focuses on the malignant GB region and detects GBC.
@@ -250,7 +250,7 @@ VGG16, ResNet50, and Inception-V3 focus on the shadow or the echogenic area, and
 
 <h2>Key Results</h2>
 
-<p align="center"><img src="./gbcnet-iitd/res.png" width="450px"> </p>
+<p align="center"><img src="./mall-iitd/res.png" width="450px"> </p>
 <p>
 Dataset comprises of 1255 images, collected from 218 patients. The test set contains 122 images. We perform 10-fold cross validation to assert generalizability of the results. 
 </p>
