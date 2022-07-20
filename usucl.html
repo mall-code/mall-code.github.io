@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>UCL</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Didact+Gothic" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <script src="js/app.js"></script>
+</head>
+
+<body font-family: 'Didact Gothic'>
+    <div class="container">
+        <div class="row">
+            <h2 class="col-md-12 text-center" font-family: 'Didact Gothic'>
+                Unsupervised Contrastive Learning of Image Representations from Ultrasound Videos with Hard Negative Mining
+                </br>
+                <small>
+                    MICCAI 2022
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://www.cse.iitd.ac.in/~soumen">
+							Soumen Basu
+                        </a>
+                      </br>IIT Delhi
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/somanshu-singla-105636214/">
+							Somanshu Singla
+                        </a>
+                        </br>IIT Delhi
+                    <li>
+                        <a href="mailto:mayank.gupta@cse.iitd.ac.in">
+							Mayank Gupta
+                        </a>
+                        </br>IIT Delhi
+                    </li>
+                    <li>
+                        <a href="mailto:pratyaksha_25@yahoo.in">
+							Pratyaksha Rana
+                        </a>
+                      </br>PGIMER Chandigarh
+                    </li>
+                    <li>
+                        <a href="mailto:pankajgupta959@gmail.com">
+							Pankaj Gupta
+                        </a>
+                        </br>PGIMER Chandigarh
+                    </li>
+                    <li>
+                        <a href="https://www.cse.iitd.ac.in/~chetan">
+							Chetan Arora
+                        </a>
+                        </br>IIT Delhi
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" align="middle">
+            <div class="btn-group" role="group" aria-label="Top menu" align="middle">
+                <a class="btn btn-primary" href="https://arxiv.org/">Paper</a>
+                <a class="btn btn-primary" href="https://github.com/">Code</a>
+                <a class="btn btn-primary" href="https://gbc-iitd.github.io/data/gbusv">Dataset</a>
+            </div>
+        </div>
+        
+        <br><br>
+
+        <div class="row" id="header_img" align="middle">
+            <image src="ucl-data/teaser-ucl.png" class="img-responsive" alt="overview" width="700px">
+        </div>
+		
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    Abstract
+                </h4>
+                <p class="text-justify" font-family: 'Didact Gothic'>
+                Rich temporal information and variations in viewpoints makes video data an attractive choice 
+                for learning image representations using unsupervised contrastive learning (UCL) techniques. 
+                State-of-the-art (SOTA) contrastive learning techniques consider frames within a video as 
+                positives in the embedding space, whereas the frames from other videos are considered negatives. 
+                We observe that unlike multiple views of an object in natural scene videos, an Ultrasound Sonography (USG) 
+                video captures different 2D slices of an organ. Hence, there is almost no similarity between the 
+                temporally distant frames of even the same USG video. In this paper we propose to instead utilize 
+                such frames as hard negatives. We advocate mining both intra-video and cross-video negatives in a 
+                hardness-sensitive negative mining curriculum in a UCL framework to learn rich image representations. 
+                We deploy our framework to learn the representations of Gallbladder (GB) malignancy from USG videos. 
+                We also construct the first large-scale USG video dataset containing 64 videos and 15,800 frames for 
+                learning GB representations. We show that standard ResNet50 backbone trained with our framework improves 
+                the accuracy of models pretrained with SOTA UCL techniques as well as supervised pretrained models on 
+                ImageNet for the GB malignancy detection task by 2--6%. We further validate the generalizability 
+                of our method on a publicly available lung USG image dataset of COVID-19 pathologies and show an 
+                improvement of 1% compared to SOTA.
+                </p>
+            </div>
+        </div>
+		
+		 <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    Key Results
+                </h4>
+                
+                <div class="row" id="result_img" align="middle">
+                    <image src="ucl-data/key-result.png" class="img-responsive" alt="results" width="600px">
+                </div>
+		
+            </div>
+        </div>
+	   
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    BibTeX (Citation)
+                </h4>
+				<pre style="white-space: pre-wrap; background: hsl(220, 50%, 95%); font-size: 11px">
+@InProceedings{xxxxx,
+  title={Unsupervised Contrastive Learning of Image Representations from Ultrasound Videos with Hard Negative Mining},
+  author={Basu, Soumen and Singla, Somanshu and Gupta, Mayank and Rana, Pratyaksha and Gupta, Pankaj and Arora, Chetan}, 
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)},
+  pages = {xxx},
+  year={2022},
+  organization={Springer}
+}			
+                </pre>
+			</div>
+        </div>
+        <!--div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4 font-family: 'Didact Gothic'>
+                    Acknowledgements
+                </h5>
+                <p class="text-justify" font-family: 'Didact Gothic'>
+                This work was supported by ???.
+                </p>
+            </div>
+        </div-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify" font-family: 'Didact Gothic'>
+                <center style="font-size:10px"><b>Credits:</b> Template of this webpage from <a href="http://www.mgharbi.com/">
+                    here.
+                </a></center>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

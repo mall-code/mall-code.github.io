@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>GBCU</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Didact+Gothic" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <script src="js/app.js"></script>
+</head>
+
+<body font-family: 'Didact Gothic'>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-md-12 text-center" font-family: 'Didact Gothic'>
+              Gallbladder Cancer Ultrasound (GBCU) Dataset</br>
+                <small>
+                   To be Released in CVPR 2022 (June, 2022)
+                </small>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://www.cse.iitd.ac.in/~soumen">
+							Soumen Basu
+                        </a>
+                      </br>IIT Delhi
+                    </li>
+                    <li>
+                        <a href="mailto:mayank.gupta@cse.iitd.ac.in">
+							Mayank Gupta
+                        </a>
+                        </br>IIT Delhi
+                    </li>
+                    <li>
+                        <a href="mailto:pratyaksha_25@yahoo.in">
+							Pratyaksha Rana
+                        </a>
+                      </br>PGIMER Chandigarh
+                    </li>
+                    <li>
+                        <a href="mailto:pankajgupta959@gmail.com">
+							Pankaj Gupta
+                        </a>
+                        </br>PGIMER Chandigarh
+                    </li>
+                    <li>
+                        <a href="https://www.cse.iitd.ac.in/~chetan">
+							Chetan Arora
+                        </a>
+                        </br>IIT Delhi
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row" id="header_img" align="middle">
+            <figure class="col-md-6 col-md-offset-3" align="middle">
+            <image src="site-data/thumbnail.png" class="img-responsive" alt="overview">
+            <figcaption>
+              <b>Figure:</b> Ultrasound Image samples with visible gallbladder.
+            </figcaption>
+            </figure>
+        </div>
+		
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    Description
+                </h4>
+                <p class="text-justify" font-family: 'Didact Gothic'>
+				GBCU is the first public dataset for Gallbladder Cancer identification from Ultrasound images.
+				GBCU contains a total of 1255 (432 normal, 558 benign, and 265 malignant) annotated abdominal Ultrasound images collected from 218 patients. 
+				Of the 218 patients, 71, 100, and 47 were from the normal, benign, and malignant classes, respectively. 
+				</br>
+				The sizes of the training and testing sets are 1133 and 122, respectively. To ensure generalization to unseen patients, 
+				all images of any particular patient were either in the train or the test split. The number of normal, benign, and 
+				malignant samples in the train and test set is 401, 509, 223, and 31, 49, and 42, respectively.
+				The width of the images is between 801 and 1556 pixels, and the height is between 564 and 947 pixels due to the 
+				cropping of patient-related information. 
+				</br>
+				We acquired data samples from patients referred to PGIMER, Chandigarh 
+				(a tertiary care referral hospital in Northern India) for abdominal ultrasound examinations of suspected Gallbladder pathologies. 
+				The study was approved by the Ethics Committee of PGIMER, Chandigarh. We obtained informed written consent from the patients at the 
+				time of recruitment, and protect their privacy by fully anonymizing the data. Grayscale B-mode static images, 
+				including both sagittal and axial sections, were recorded by radiologists for each patient using a Logiq S8 machine.
+				 
+                </p>
+            </div>
+        </div>
+		
+		 <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    Labels and Annotations
+                </h4>
+                <p class="text-justify" font-family: 'Didact Gothic'>
+				Each image is labeled as one of the three classes - normal, benign, or malignant. The ground-truth labels were biopsy-proven 
+				to assert the correctness. Additionally, in each image, expert radiologists have drawn an axis-aligned 
+				bounding box spanning the entire GB and adjacent liver parenchyma to annotate the region of interest. Additionally,
+				bounding-box annotation for abnormal pathologies (e.g. stone, benign mural thickening, or malignancy) are also provided.
+				</br>
+				The GBCU dataset is suitable for both image classification and object detection tasks. Apart from the Gallbladder Cancer,
+				the dataset can also be used for detection of several other pathologies. 
+                </p>
+            </div>
+        </div>
+	   
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4> 
+                    Download Dataset
+                </h4>
+                <p class="text-justify" font-family: 'Didact Gothic'>
+				To obtain the dataset, please fill and sign this <a href="site-data/LicenseAgreementGBCU.pdf">License Agreement</a>, and send it to <a href="mailto:pankajgupta959.gmail.com">Dr. Pankaj Gupta </a> 
+				and <a href="mailto:chetan@cse.iitd.ac.in">Dr. Chetan Arora</a>. 
+				</br>
+				After duly verifying the License Agreement, we will mail the dataset download link to you.
+				</br>
+				Student Researchers must ask their Supervisor/ Head of the Department to fill and send the agreement to us.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    BibTeX (Citation)
+                </h4>
+				If you use GBCU for your research, then please cite our paper using the following BibTeX.
+				<pre style="white-space: pre-wrap; background: hsl(220, 50%, 95%); font-size: 12px">
+@InProceedings{xxxxx,
+  title={Surpassing the Human Accuracy: Gallbladder Cancer Detection from USG with Curriculum Learning},
+  author={Basu, Soumen and Gupta, Mayank and Rana, Pratyaksha and Gupta, Pankaj and Arora, Chetan}, 
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages = {xxx},
+  year={2022}
+}				</pre>
+			</div>
+        </div>
+        <!--div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4 font-family: 'Didact Gothic'>
+                    Acknowledgements
+                </h5>
+                <p class="text-justify" font-family: 'Didact Gothic'>
+                This work was supported by ???.
+                </p>
+            </div>
+        </div-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify" font-family: 'Didact Gothic'>
+                <center style="font-size:10px"><b>Credits:</b> Template of this webpage from <a href="http://www.mgharbi.com/">
+                    here.
+                </a></center>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>GBUSV</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Didact+Gothic" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <script src="js/app.js"></script>
+</head>
+
+<body font-family: 'Didact Gothic'>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-md-12 text-center" font-family: 'Didact Gothic'>
+              Gallbladder Ultrasound Video (GBUSV) Dataset</br>
+                <small>
+                    MICCAI 2022
+                </small>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://www.cse.iitd.ac.in/~soumen">
+							Soumen Basu
+                        </a>
+                      </br>IIT Delhi
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/somanshu-singla-105636214/">
+							Somanshu Singla
+                        </a>
+                        </br>IIT Delhi
+                    <li>
+                        <a href="mailto:mayank.gupta@cse.iitd.ac.in">
+							Mayank Gupta
+                        </a>
+                        </br>IIT Delhi
+                    </li>
+                    <li>
+                        <a href="mailto:pratyaksha_25@yahoo.in">
+							Pratyaksha Rana
+                        </a>
+                      </br>PGIMER Chandigarh
+                    </li>
+                    <li>
+                        <a href="mailto:pankajgupta959@gmail.com">
+							Pankaj Gupta
+                        </a>
+                        </br>PGIMER Chandigarh
+                    </li>
+                    <li>
+                        <a href="https://www.cse.iitd.ac.in/~chetan">
+							Chetan Arora
+                        </a>
+                        </br>IIT Delhi
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" align="middle">
+            <div class="btn-group" role="group" aria-label="Top menu" align="middle">
+                <a class="btn btn-primary" href="https://arxiv.org/">Paper</a>
+                <a class="btn btn-primary" href="https://github.com/">Code</a>
+            </div>
+        </div>
+
+        <div class="row" id="header_img" align="middle">
+            <figure class="col-md-6 col-md-offset-3" align="middle">
+            <image src="site-data/thumbnail-gbusv.png" class="img-responsive" alt="overview">
+            <figcaption>
+              <b>Figure:</b> Sample ultrasound video sequences.
+            </figcaption>
+            </figure>
+        </div>
+		
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    Description
+                </h4>
+                <p class="text-justify" font-family: 'Didact Gothic'>
+				GBUSV is a un-annotated dataset consisting of ultrasound videos of of patients with either of a malignant or a non-malignant gallbladder. 
+				The ultrasound videos were obtained from patients referred to the radiology department of PGIMER, Chandigarh (a high-input hospital in Northern India)
+				for abdominal ultrasound examinations of suspected gallbladder pathologies. Patients were at fasting of at least 6 hours. 
+				A 1-5 MHz curved array transducer (C-1-5D, Logiq S8, GE Healthcare) was used. The scanning intended to include the entire gallbladder 
+				and the lesion or pathology. The length of the video sequences varies from 43 to 888 frames. 
+				The dataset consists of 32 malignant and 32 non-malignant videos containing a total of 12,251 and 3,549 frames, respectively. 
+				The video frames are cropped from the center to anonymize the patient information and annotations. The processed frame sizes are of size 360x480 pixels.
+                </p>
+            </div>
+        </div>
+		
+		 <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    Annotations
+                </h4>
+                <p class="text-justify" font-family: 'Didact Gothic'>
+				The images of the video sequences are un-annotated and suitable for unsupervised learning tasks. 
+                We provide the high-level categorization for each video whether it's malignant or non-malignant. 
+                </p>
+            </div>
+        </div>
+	   
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4> 
+                    Download Dataset
+                </h4>
+                <p class="text-justify" font-family: 'Didact Gothic'>
+				To obtain the dataset, please fill and sign this <a href="site-data/LicenseAgreementGBCU.pdf">License Agreement</a>, and send it to <a href="mailto:pankajgupta959.gmail.com">Dr. Pankaj Gupta </a> 
+				and <a href="mailto:chetan@cse.iitd.ac.in">Dr. Chetan Arora</a>. 
+				</br>
+				After duly verifying the License Agreement, we will mail the dataset download link to you.
+				</br>
+				Student Researchers must ask their Supervisor/ Head of the Department to fill and send the agreement to us.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>
+                    BibTeX (Citation)
+                </h4>
+				If you use GBUSV for your research, then please cite our paper using the following BibTeX.
+				<pre style="white-space: pre-wrap; background: hsl(220, 50%, 95%); font-size: 11px">
+@InProceedings{xxxxx,
+  title={Unsupervised Contrastive Learning of Image Representations from Ultrasound Videos with Hard Negative Mining},
+  author={Basu, Soumen and Singla, Somanshu and Gupta, Mayank and Rana, Pratyaksha and Gupta, Pankaj and Arora, Chetan}, 
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)},
+  pages = {xxx},
+  year={2022},
+  organization={Springer}
+}			
+                </pre>
+			</div>
+        </div>
+        <!--div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4 font-family: 'Didact Gothic'>
+                    Acknowledgements
+                </h5>
+                <p class="text-justify" font-family: 'Didact Gothic'>
+                This work was supported by ???.
+                </p>
+            </div>
+        </div-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify" font-family: 'Didact Gothic'>
+                <center style="font-size:10px"><b>Credits:</b> Template of this webpage from <a href="http://www.mgharbi.com/">
+                    here.
+                </a></center>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
