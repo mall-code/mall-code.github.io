@@ -188,73 +188,31 @@ p code
 
 <h1>Surpassing the Human Accuracy: Detecting Gallbladder Cancer from USG Images with Curriculum Learning</h1>
 <p id="authors">
-<a href="https://www.cse.iitd.ac.in/~soumen">Soumen Basu</a><sup>a </sup> 
-<a href=mailto:mayank.gupta@cse.iitd.ac.in>Mayank Gupta</a><sup>a </sup> 
-<a href=mailto:pratyaksha_25@yahoo.in>Pratyaksha Rana</a><sup>b </sup> 
-<a href=mailto:pankajgupta959@gmail.com>Pankaj Gupta</a><sup>b </sup> 
-<a href="https://www.cse.iitd.ac.in/~chetan">Chetan Arora</a><sup>a </sup> 
+<a href=mailto:nikhil.jangamreddy@uqidar.iitd.ac.in>Nikhil Reddy</a><sup>a </sup> 
+<a href="">Abhinav Singhal</a><sup>a </sup> 
+<a href="">Abhishek kumar</a><sup>a </sup> 
+<a href="">Mahsa Baktashmotlagh</a><sup>b </sup> 
+<a href="">Chetan Arora</a><sup>a </sup> 
 <br>
 <br>
 <sup> a </sup> Indian Institute of Technology, Delhi <br>
-<sup> b </sup> Post Graduate Institute of Medical Education and Research, Chandigarh
+<sup> b </sup> The University of Queensland, Australia.
 </p>
 
 <div class="downloadpaper">
 <a href="./mall-iitd/arch-compact.jpg"><img src="./mall-iitd/arch-compact.jpg" width="400px" border="2"></a>
 </div>
 
-<p>In this work, we explore the potential of CNN-based models for gallbladder cancer (GBC) detection from ultrasound sonography (USG) images as no prior study is known. USG is the most common diagnostic modality for GBC detection due to its low cost and accessibility. However, USG images are challenging to analyze due to low image quality, noise, and varying viewpoints due to the handheld nature of the sensor. Our exhaustive study of state-of-the-art (SOTA) image classification techniques for the problem reveals that they often fail to learn the salient GB region due to the presence of shadows in the USG images. SOTA object detection techniques also achieve low accuracy because of spurious textures due to noise or adjacent organs. We propose GBCNet to tackle the challenges in our problem. GBCNet first extracts the regions of interest (ROIs) by detecting the GB (and not cancer), and then uses a new multi-scale, second-order pooling architecture specializing in classifying GBC. To effectively handle spurious textures, we propose a curriculum inspired by human visual acuity, which reduces the texture biases in GBCNet. Experimental results demonstrate that GBCNet significantly outperforms SOTA CNN models, as well as even the expert radiologists. 
+<p>Computer vision systems for autonomous navigation must generalize well in adverse weather and illumination conditions expected in the real world. However, semantic segmentation of images captured in such conditions remains a challenging task for current state-of-theart (SOTA) methods trained on broad daylight images, due to the associated distribution shift. On the other hand, domain adaptation techniques developed for the purpose rely on the availability of the source data, (un)labeled target data and/or its auxiliary information (e.g., GPS). Even then, they typically adapt to a single(specific) target domain(s). To remedy this, we propose a novel, fully test time, adaptation technique, named Master of ALL (MALL), for simultaneous generalization to multiple target domains. MALL learns to generalize on unseen adverse weather images from multiple target domains directly at the inference time. More specifically, given a pre-trained model and its parameters, MALL enforces edge consistency prior at the inference stage and updates the model based on (a) a single test sample at a time (MALL-sample), or (b) continuously for the whole test domain (MALL-domain). Not only the target data, MALL also does not need access to the source data and thus, can be used with any pre-trained model. Using a simple model pre-trained on daylight images, MALL outperforms specially designed adverse weather semantic segmentation methods, both in domain generalization and testtime adaptation settings. Our experiments on foggy, snow, night, cloudy, overcast, and rainy conditions demonstrate the target domain-agnostic effectiveness of our approach. We further show that MALL can improve the performance of a model on an adverse weather condition, even when the model is already pre-trained for the specific condition.
 </p>
 
 <p><a href="./mall-iitd/08360.pdf" target="_blank">Paper</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="./mall-iitd/08360-supp.pdf" target="_blank">Supplementary</a></p>
 
-<p><a href="https://gbc-iitd.github.io/data/gbcu" target="_blank">Dataset</a></p>
-
-<p><a href="https://github.com/sbasu276/GBCNet" target="_blank">Source code and pre-trained models</a></p>
+<p><a href="https://github.com/mall-code/code-repository" target="_blank">Source code</a></p>
 
 <br clear="all">
 </div>
 
-
-<div class="content" id="overview">
-
-<h2>Overview</h2>
-
-<div class="downloadpaper">
-<a href="./mall-iitd/teaser.png"><img src="./mall-iitd/teaser.png" width="200px" border="2"></a>
-</div>
-
-<p>(a), (b), and (c) Normal, benign, and malignant GB sample in USG images, respectively. While normal or benign GB have regular anatomy, clear boundary is absent in malignant GB. 
-<br>
-(d) A malignant (biopsy-proven) GB sample. (e) Shadows having visual traits of a GB leads to localization error in ResNet50. (f) GBCNet tackles shadow artifacts well. 
-<br>
-(g) Another sample of a malignant GB. (h) The radiologist incorrectly diagnosed the GB as benign based on the stone and wall thickening. (i) GBCNet helps the radiologist to identify the salient region with liver infiltration by the GB, a critical feature of GBC, and correct the prediction.
-
-</p>
-
-</div>
-
-<div class="content" id="vis">
-
-<h2>Grad-CAM Visuals</h2>
-
-<p align="center"><img src="./mall-iitd/cam.png" width="450px"> </p>
-
-<p>
-VGG16, ResNet50, and Inception-V3 focus on the shadow or the echogenic area, and mostly fail to detect GBC. GBCNet accurately focuses on the malignant GB region and detects GBC.
-</p>
-
-</div>
-
-<div class="content" id="res">
-
-<h2>Key Results</h2>
-
-<p align="center"><img src="./mall-iitd/res.png" width="450px"> </p>
-<p>
-Dataset comprises of 1255 images, collected from 218 patients. The test set contains 122 images. We perform 10-fold cross validation to assert generalizability of the results. 
-</p>
-</div>
 
 
 
